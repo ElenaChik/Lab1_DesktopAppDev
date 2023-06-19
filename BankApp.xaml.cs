@@ -28,13 +28,12 @@ namespace Lab1_DesktopAppDev
         {
             BankCharges bc = new BankCharges();
             double b = double.Parse(balanceBox.Text);
-            //int v = int.Parse(checksNumberBox.Text);
+            int v = int.Parse(checksNumberBox.Text);
             bc.setBalance(b);
-            bc.setChecksCounter(1); 
+            bc.setChecksCounter(v); 
             messageLabel.Content = bc.getMonthServiceFee() + "$";
 
-            
-            //newBalanceRezultLabel.Content = bc.getBalance();
+            newBalanceRezultLabel.Content = bc.getBalance() + "$";
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

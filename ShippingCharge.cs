@@ -45,6 +45,7 @@ namespace Lab1_DesktopAppDev
             double weightR = calcWeightRate();
             double distanceRate = calcDistanceRate();
             double charge = weightR * distanceRate;
+
             return charge;
         }
 

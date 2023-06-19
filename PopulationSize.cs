@@ -60,7 +60,7 @@ namespace Lab1_DesktopAppDev
                  MessageBox.Show(errMessage);
             }
                
-            dailySizeInt[0] = startSize; // ?????
+            dailySizeInt[0] = startSize; // .....
 
             String result = "Day 1: " + dailySizeInt[0].ToString();
 

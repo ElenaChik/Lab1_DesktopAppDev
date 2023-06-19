@@ -39,18 +39,12 @@ namespace Lab1_DesktopAppDev
             this.checksCounter = checksCounter;
         }
 
-
+        /*
+         * Method get a fee rate accordint to the check quantity
+         */
         public double getCheckFeeRate()
         {
-
-          /*  try
-            {*/
-                double checkFeeRate = 0;
-            /*}catch (Exception e)
-            {
-                MessageBox.Show("Error");
-            }*/
-            
+            double checkFeeRate = 0;
 
             if (checksCounter < 20)
             {
@@ -72,12 +66,10 @@ namespace Lab1_DesktopAppDev
              return checkFeeRate;
         }
 
-        public void setNewBalance()
-        {
-            balance = balance - getMonthServiceFee();
-        }
 
-
+        /**
+         * Method calculate monthly fee and updates balance
+         */
         public double getMonthServiceFee()
         {
             double monthServiceFee = monthFee;
@@ -86,11 +78,10 @@ namespace Lab1_DesktopAppDev
             {
                 monthServiceFee += lowBalanceFee;
             }
-                
 
             monthServiceFee += getCheckFeeRate() * checksCounter;
 
-            setNewBalance();
+            balance -= monthServiceFee;
 
             return monthServiceFee;
         }

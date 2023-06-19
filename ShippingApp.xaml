@@ -10,7 +10,7 @@
         <TextBox x:Name="weightBox" HorizontalAlignment="Left" Margin="410,150,0,0" TextWrapping="Wrap" Text="insert Weight, in kg" VerticalAlignment="Top" Width="200" FontSize="14"/>
         <TextBox x:Name="distanceBox" HorizontalAlignment="Left" Margin="410,190,0,0" TextWrapping="Wrap" Text="insert Distance, in miles" VerticalAlignment="Top" Width="200" FontSize="14"/>
         <Label x:Name="ffsLabel" Content="Fast Freight Shipping (FFS)" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top" Height="36" Width="340" FontSize="16" FontWeight="Bold" HorizontalContentAlignment="Center"/>
-        <Label x:Name="chargeLabel" Content="The charge for your shipping is: " HorizontalAlignment="Left" Margin="110,290,0,0" VerticalAlignment="Top" Width="262" FontSize="14" HorizontalContentAlignment="Right"/>
+        <Label x:Name="chargeLabel" Content="The charge for your shipping, $ is: " HorizontalAlignment="Left" Margin="110,290,0,0" VerticalAlignment="Top" Width="262" FontSize="14" HorizontalContentAlignment="Right"/>
         <Button x:Name="BackButton" Content="BACK to the Menu &gt;&gt;" HorizontalAlignment="Left" Margin="600,360,0,0" VerticalAlignment="Top" Height="30" Width="160" FontSize="14" Click="BackButton_Click"/>
         <Button Content="CALCULATE" HorizontalAlignment="Left" Margin="410,360,0,0" VerticalAlignment="Top" Height="30" Width="160" Click="Button_Click" FontWeight="Bold" FontSize="14"/>
         <Label x:Name="chargeResultLabel" Content="Your charge:" HorizontalAlignment="Left" Margin="410,290,0,0" VerticalAlignment="Top" Width="200" FontSize="14" FontStyle="Italic" FontWeight="Bold"/>
