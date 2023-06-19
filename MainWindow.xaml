@@ -7,6 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <RadioButton x:Name="bankAppRadio" Content="Bank Application" HorizontalAlignment="Left" Margin="303,150,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <RadioButton x:Name="shippingRadio" Content="Fast Freight Shipping" HorizontalAlignment="Left" Margin="303,190,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <RadioButton x:Name="populationRadio" Content="Population of organisms prediction" HorizontalAlignment="Left" Margin="303,230,0,0" VerticalAlignment="Top" FontSize="14" FontWeight="Bold"/>
+        <Label x:Name="chooseAppLabel" Content="CHOOSE APPLICATION TO RUN" HorizontalAlignment="Left" Margin="309,50,0,0" VerticalAlignment="Top" FontSize="16" HorizontalContentAlignment="Center" FontWeight="Bold"/>
+        <Button x:Name="runButton" Content="RUN" HorizontalAlignment="Left" Margin="309,329,0,0" VerticalAlignment="Top" Height="30" Width="160" FontSize="14" RenderTransformOrigin="0.729,0.459" Click="runButton_Click" FontWeight="Bold"/>
+        <Label x:Name="messageLable" Content="" HorizontalAlignment="Left" Margin="276,350,0,0" VerticalAlignment="Top" FontSize="18"/>
+
     </Grid>
 </Window>

@@ -55,9 +55,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="WllcomePage.xaml.cs">
-      <DependentUpon>WllcomePage.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="PopulationSize.cs" />
+    <Compile Include="ShippingCharge.cs" />
+    <Page Include="BankApp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PopulationApp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ShippingApp.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -66,14 +77,20 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="BankApp.xaml.cs">
+      <DependentUpon>BankApp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BankCharges.cs" />
+    <Compile Include="PopulationApp.xaml.cs">
+      <DependentUpon>PopulationApp.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ShippingApp.xaml.cs">
+      <DependentUpon>ShippingApp.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="WllcomePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

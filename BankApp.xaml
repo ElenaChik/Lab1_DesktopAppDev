@@ -1,0 +1,23 @@
+﻿<Window x:Class="Lab1_DesktopAppDev.BankApp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lab1_DesktopAppDev"
+        mc:Ignorable="d"
+        Title="BankApp" Height="450" Width="800">
+    <Grid >
+        <Button x:Name="monthFeeButton" Content="CALCULATE" HorizontalAlignment="Left" Margin="410,360,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.866,0.553" Click="Button_Click" Height="30" Width="164" FontSize="14" FontWeight="Bold"/>
+        <Label x:Name="messageLabel" Content="Month Fee" HorizontalAlignment="Right" Margin="0,250,157,0" VerticalAlignment="Top" Width="233" FontSize="14" FontStyle="Italic" FontWeight="Bold"/>
+        <Label x:Name="numberChecksLabel" Content="Insert the number of checks&#xD;&#xA; you had this month" HorizontalAlignment="Left" Margin="116,190,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.43,0.051" FontSize="14" Width="283" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+        <Label x:Name="balanceLabel" Content="Insert your balance amount" HorizontalAlignment="Left" Margin="217,156,0,0" VerticalAlignment="Top" FontSize="14"/>
+        <TextBox x:Name="balanceBox" HorizontalAlignment="Left" Margin="410,160,0,0" TextWrapping="Wrap" Text="Insert your balance" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="checksNumberBox" HorizontalAlignment="Left" Margin="410,200,0,0" TextWrapping="Wrap" Text="Insert number of checks" VerticalAlignment="Top" Width="152"/>
+        <Button x:Name="BackButton" Content="BACK to the Menu &gt;&gt;" HorizontalAlignment="Left" Margin="600,360,0,0" VerticalAlignment="Top" Height="30" Width="160" FontSize="14" Click="BackButton_Click"/>
+        <Label x:Name="bankLabel" Content="Bank Application" HorizontalAlignment="Center" Margin="0,70,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" Width="260" HorizontalContentAlignment="Center"/>
+        <Label x:Name="feeLabel" Content="Your Month Fee is:" HorizontalAlignment="Left" Margin="275,250,0,0" VerticalAlignment="Top" FontSize="14" FontStyle="Italic"/>
+        <Label x:Name="newBalance" Content="Your current Balance is:" HorizontalAlignment="Left" Margin="244,284,0,0" VerticalAlignment="Top" FontSize="14" FontStyle="Italic"/>
+        <Label x:Name="newBalanceRezultLabel" Content="New Balance" HorizontalAlignment="Right" Margin="0,284,157,0" VerticalAlignment="Top" Width="233" FontSize="14" FontStyle="Italic" FontWeight="Bold"/>
+
+    </Grid>
+</Window>

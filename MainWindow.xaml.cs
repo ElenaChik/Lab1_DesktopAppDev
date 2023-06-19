@@ -25,5 +25,37 @@ namespace Lab1_DesktopAppDev
             InitializeComponent();
         }
 
+        private void runButton_Click(object sender, RoutedEventArgs e)
+        {
+
+
+            if (bankAppRadio.IsChecked == true)
+            {
+                //BankCharges bc = new BankCharges();
+                BankApp ba = new BankApp();
+                ba.Show();
+                messageLable.Content = "Done";
+                this.Close();
+
+            }
+            else if (shippingRadio.IsChecked == true)
+            {
+
+                ShippingApp sa = new ShippingApp();
+                sa.Show();
+                messageLable.Content = "Done";
+                this.Close();
+            }
+            else if (populationRadio.IsChecked == true)
+            {
+
+                PopulationApp pa = new PopulationApp();
+                pa.Show();
+                messageLable.Content = "Done";
+                this.Close();
+            }
+        }
     }
+
+  
 }
