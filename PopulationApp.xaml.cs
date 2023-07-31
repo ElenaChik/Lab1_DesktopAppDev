@@ -36,7 +36,7 @@ namespace Lab1_DesktopAppDev
         {
             PopulationSize ps = new PopulationSize();
             ps.setStartSize(int.Parse(sizeBox.Text));
-            ps.setDailyIncreaze(int.Parse(increaseBox.Text));
+            ps.setDailyIncrease(int.Parse(increaseBox.Text));
             ps.setNumberDays(int.Parse(numberDaysBox.Text));
 
             resultLabel.Content = ps.showDailyPopulationSize();

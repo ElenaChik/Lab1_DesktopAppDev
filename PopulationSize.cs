@@ -10,7 +10,7 @@ namespace Lab1_DesktopAppDev
     internal class PopulationSize
     {
         private int startSize;
-        private int dailyIncreaze;
+        private int dailyIncrease;
         private int numberDays;
 
         public PopulationSize() { }
@@ -25,14 +25,14 @@ namespace Lab1_DesktopAppDev
             return this.startSize;
         }
 
-        public void setDailyIncreaze(int dailyIncreaze)
+        public void setDailyIncrease(int dailyIncreaze)
         {
-            this.dailyIncreaze = dailyIncreaze;
+            this.dailyIncrease = dailyIncreaze;
         }
 
-        public int getDailyIncreazee()
+        public int getDailyIncrease()
         {
-            return this.dailyIncreaze;
+            return this.dailyIncrease;
         }
 
         public void setNumberDays(int numberDays)
@@ -45,6 +45,9 @@ namespace Lab1_DesktopAppDev
             return this.numberDays;
         }
 
+        /*
+         * Method returns a string of population size for each day
+         */
         public string showDailyPopulationSize()
         {
             string errMessage = "Error. \nPlease enter valid parameters:\n" +
@@ -52,10 +55,10 @@ namespace Lab1_DesktopAppDev
                 "Average dayli increase: more or equal 2\n" +
                 "Number of days: more or equal 1\n";
 
-            int[] dailySizeInt = new int[numberDays];
+            double[] dailySizeInt = new double[numberDays];
 
 
-            if (startSize < 2 || dailyIncreaze < 0 || numberDays < 1)
+            if (startSize < 2 || dailyIncrease < 0 || numberDays < 1)
             {
                  MessageBox.Show(errMessage);
             }
@@ -66,10 +69,23 @@ namespace Lab1_DesktopAppDev
 
             for (int i = 1; i < numberDays; i++)
             {
-                dailySizeInt[i] = (dailySizeInt[i - 1] + (dailySizeInt[i - 1] * dailyIncreaze/100));
+                // i - is today's day
+                dailySizeInt[i] = nextDaySize(dailySizeInt[i - 1]); 
                 result += ",\nDay" + (i + 1) + ": " + dailySizeInt[i].ToString();
             }
             return result;
+        }
+
+
+        /*
+         * Method returns the size of the population of next day
+         */
+        public double nextDaySize(double previousDaySize)
+        {
+            double nextDaySize = 0;
+            nextDaySize = (previousDaySize + (previousDaySize * dailyIncrease / 100));
+
+            return nextDaySize;
         }
     }
 }

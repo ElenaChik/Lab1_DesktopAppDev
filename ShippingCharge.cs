@@ -40,6 +40,10 @@ namespace Lab1_DesktopAppDev
             return this.distance;
         }
 
+
+        /*
+         *  Method calculates shipping charge
+         */
         public double calcCharge()
         {
             double weightR = calcWeightRate();
@@ -52,6 +56,7 @@ namespace Lab1_DesktopAppDev
         private double calcWeightRate()
         {
             double weightRate = 0;
+
             if (this.weight <= 2)
             {
                 weightRate = 1.10;
@@ -70,6 +75,10 @@ namespace Lab1_DesktopAppDev
             return weightRate;
         }
 
+
+        /*
+         * Method calculate distance rate
+         */
         private double calcDistanceRate()
         {
             double distanceRate = 0;
