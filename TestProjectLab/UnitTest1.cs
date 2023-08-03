@@ -1,6 +1,4 @@
-using NUnit.Framework;
-//using NUnitTestingCheck;
-using System.Globalization;
+using Lab1_DesktopAppDev;
 
 namespace TestProjectLab
 {
@@ -14,39 +12,34 @@ namespace TestProjectLab
         // BankCharges Testing
         [Test]
         public void Test1_1GetCheckFeeRate()
-        {
-            //Lab1_DesktopAppDev l1 = new Lab1_DesktopAppDev();
-           
+        {       
+            BankCharges bc = new BankCharges(100, 10);
 
-            BankCharges bc = new BankCharges { 100, 10 };
+            double var = bc.getCheckFeeRate();
 
-            double var = bc.GetCheckFeeRate();
-
-            Assert.AreEqual(var, 0.1);
-   
+            Assert.That(var, Is.EqualTo(0.1));   
         }
-       
 
-        //  ShippingCharge
+
+        // ShippingCharge
         [Test]
         public void Test2_1CalcWeightRate()
         {
             ShippingCharge sc = new ShippingCharge();
-            sc.setWeight = 1.2;
+            sc.setWeight(1.2);
             double var = sc.calcWeightRate();
 
-            Assert.AreEqual(var, 1.1);
+            Assert.That(var, Is.EqualTo(1.1));
         }
 
         [Test]
         public void Test2_2CalcDistanceRate()
         {
             ShippingCharge sc = new ShippingCharge();
-            sc.setDistance = 1000;
+            sc.setDistance(1001);
             double var = sc.calcDistanceRate();
 
-
-            Assert.AreEqual(var, 2.2);
+            Assert.That(var, Is.EqualTo(3));
 
         }
 
@@ -56,11 +49,11 @@ namespace TestProjectLab
         public void Test3_1NextDaySize()
         {
             PopulationSize ps = new PopulationSize();
-            int dailyIncrease = ps.setDailyIncrease(50);
+            ps.setDailyIncrease(50);
             double var = ps.nextDaySize(100);
 
 
-            Assert.AreEqual(var, 150);
+            Assert.That(var, Is.EqualTo(150));
 
         }
     }

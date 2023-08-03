@@ -47,13 +47,13 @@ namespace Lab1_DesktopAppDev
         public double calcCharge()
         {
             double weightR = calcWeightRate();
-            double distanceRate = calcDistanceRate();
+            int distanceRate = calcDistanceRate();
             double charge = weightR * distanceRate;
 
             return charge;
         }
 
-        private double calcWeightRate()
+        public double calcWeightRate()
         {
             double weightRate = 0;
 
@@ -79,16 +79,16 @@ namespace Lab1_DesktopAppDev
         /*
          * Method calculate distance rate
          */
-        private double calcDistanceRate()
+        public int calcDistanceRate()
         {
-            double distanceRate = 0;
+            int distanceRate = 0;
             if (this.distance % 500 != 0)
             {
-                distanceRate = (this.distance / 500) + 1;
+                distanceRate = (int)((this.distance / 500) + 1);
             }
             else
             {
-                distanceRate = this.distance / 500;
+                distanceRate = (int)(this.distance / 500);
             }
 
             return distanceRate;
