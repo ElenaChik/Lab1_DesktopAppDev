@@ -32,7 +32,7 @@ namespace Lab1_DesktopAppDev
             bc.setBalance(b);
             bc.setChecksCounter(v); 
             messageLabel.Content = bc.getMonthServiceFee() + "$";
-
+            bc.setNewBalance();
             newBalanceRezultLabel.Content = bc.getBalance() + "$";
         }
 

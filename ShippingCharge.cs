@@ -49,6 +49,7 @@ namespace Lab1_DesktopAppDev
             double weightR = calcWeightRate();
             int distanceRate = calcDistanceRate();
             double charge = weightR * distanceRate;
+            charge = Math.Round(charge, 2);
 
             return charge;
         }
@@ -59,18 +60,18 @@ namespace Lab1_DesktopAppDev
 
             if (this.weight <= 2)
             {
-                weightRate = 1.10;
+                weightRate = 1.1;
             }else if (this.weight <= 6)
             {
-                weightRate = 2.20;
+                weightRate = 2.2;
             }
             else if (this.weight <= 10)
             {
-                weightRate = 3.70;
+                weightRate = 3.7;
             }
             else if (this.weight > 10)
             {
-                weightRate = 4.80;
+                weightRate = 4.8;
             }
             return weightRate;
         }
@@ -84,11 +85,11 @@ namespace Lab1_DesktopAppDev
             int distanceRate = 0;
             if (this.distance % 500 != 0)
             {
-                distanceRate = (int)((this.distance / 500) + 1);
+                distanceRate = ((int)this.distance / 500) + 1;
             }
             else
             {
-                distanceRate = (int)(this.distance / 500);
+                distanceRate = (int)this.distance / 500;
             }
 
             return distanceRate;
